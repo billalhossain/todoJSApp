@@ -165,13 +165,15 @@ function dltTodo(e){
     isTodos()
     var todoDiv = btnParentElement.parentElement;
     if(btnParentElement.classList.contains('dlt-btn')){
-
         todoDiv.classList.add('swipe-right')
         todoDiv.addEventListener('transitionend', function(){
-            var todoIndex = todoDiv.children[0].innerHTML;
-            todos.splice(todos.indexOf(todoIndex), 1);
-            localStorage.setItem('todos', JSON.stringify(todos));
             getTodos()
+            todos.forEach( function(e){
+                if(todoDiv.childNodes[0].innerHTML === e.newTodo){
+                    todos.splice(todos.indexOf(e), 1)
+                    localStorage.setItem('todos', JSON.stringify(todos));
+                }
+            })
         })
     }
     
