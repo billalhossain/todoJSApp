@@ -1,0 +1,67 @@
+.todo-app{
+    overflow: hidden;
+}
+.todo-list, .input-form{
+    width: 60%;
+    margin: auto;
+    /* text-align: center; */
+}
+.input-form{
+    display: flex;
+    margin-bottom: 20px;    
+    /* justify-content: space-between; */
+}
+.input-form input{
+    max-width: 400px;
+    padding: 0 10px;;
+    border-radius: 0;
+    flex: 1;
+}
+
+.input-form button{
+    margin: 0 10px;
+    background: blue;
+    color: #fff;
+}
+.todo-item{
+    background:#eee;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.todo-item.complate li{
+    text-decoration: line-through;
+    opacity: .4;
+}
+li{
+    list-style: none;
+    flex: 1;
+    padding: 10px;
+}
+.swipe-right{
+    transition: transform .3s ease-out;
+    transform: translateX(500px);
+    opacity: 0.3;
+}
+button{
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    transition: all .3s;
+    
+    transition: all .3 ease-in-out
+}
+.dlt-btn{
+    background: red;
+    color: #fff;
+}
+.dlt-btn:hover{
+    background: #e01616;
+}
+.complate-btn{
+    color: #fff;
+    background: green;
+}
+.complate-btn:hover{
+    background: #178c17;
+}
